@@ -10,10 +10,14 @@ while true do
  
     for item, config in pairs(items) do
         if itemsCrafting[item] == true then
-            logInfo(item .. " is already being crafted, skipping...")
+           -- logInfo(item .. " is already being crafted, skipping...")
         else
             local success, answer = ae2.requestItem(item, config[1], config[2], config[3])
-            logInfo(answer)
+            if(success == true and answer ~= nil) then
+                logInfo(answer)
+            elseif(success == false and answer ~= nil) then
+                logInfo("Error: " .. answer)
+            end
         end
  
     end
