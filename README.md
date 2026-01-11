@@ -12,13 +12,9 @@ Also supports having a threshold.
 
 # Installation
 
-Download it
-
 ```bash
-wget raw.githubusercontent.com/Echoloquate/Level-Maintainer/master/installer.lua && installer
+wget https://raw.githubusercontent.com/BlackPhoenix134/Gtnh-Level-Maintainer/master/installer.lua && installer.lua
 ```
-
-Run it
 
 ```bash
 Maintainer
