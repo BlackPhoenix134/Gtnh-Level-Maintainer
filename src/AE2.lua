@@ -56,6 +56,10 @@ function AE2.requestItem(name, threshold, count, fluidName)
             if(threshold ~= nil and itemInSystem == nil) then
                 return table.unpack({false, "Not Found: " .. name .. "/" .. fluidName})
             end
+
+            if itemInSystem ~= nil and itemInSystem.size >= threshold then 
+                return table.unpack({true, nil})
+            end
         end
         
         if item.label == name then
